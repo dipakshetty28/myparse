@@ -26,11 +26,11 @@ public class JdtParserExample {
 	private static List<String> missingJavadocsMethod = new ArrayList<String>();
 
 	public static void main(String[] args) {
-//		if (args.length != 1) {
-//			System.out.println("Please provide the path to the Java project directory.");
-//			return;
-//		}
-		File projectDir = new File("C:\\Users\\dipak\\eclipse-workspace\\Testing");
+		if (args.length != 1) {
+			System.out.println("Please provide the path to the Java project directory.");
+			return;
+		}
+		File projectDir = new File(args[0]); // File("C:\\Users\\dipak\\eclipse-workspace\\Testing");
 		processDirectory(projectDir);
 
 		// Convert results to JSON and print
